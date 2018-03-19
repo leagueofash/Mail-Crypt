@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Python Flask Image Gallery App</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+    <style>
+            .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+    </style>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="upload-form" action="{{url_for('send')}}" method="POST" enctype="multipart/form-data">
+            <!-- Form Name -->
+            <legend>Send Your Mail</legend>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label for="txtTitle">Subject </label>
+                <input id="Subject-id" name="subject" type="text" class="form-control input-md">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTitle">Receiver's Email-ID </label>
+                <input id="Recipient-id" name="recipient" type="text" class="form-control input-md">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTitle">Enter the Encryption Key </label>
+                <input id="Encryption-Key" name="key" type="text" class="form-control input-md">
+            </div>
+
+            <div class="form-group">
+                <label for="txtTitle">Body of the Mail</label>
+                <input id="body" name="mailbody" type="text" style ="height: 400px; width:800px" class="form-control input-md">
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <p class="btn btn-default btn-file">
+                    <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Send Mail" />
+                </p>
+            </div>
+
+        </form>
+
+        <footer class="footer">
+            <p>&copy; Mail</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

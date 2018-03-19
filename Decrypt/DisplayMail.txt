@@ -1,0 +1,4 @@
+maacryptoproj@gmail.com 
+second try 
+This is the message that needs to be encrypted, try your best to do it
+Message Integrity Proven
