@@ -15,8 +15,8 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
-    MAIL_USERNAME='maacryptoproj@gmail.com',
-    MAIL_PASSWORD='qwert1234'
+    MAIL_USERNAME='xxxxxxxx@gmail.com',
+    MAIL_PASSWORD='password_goes_here'
 )
 
 
@@ -35,13 +35,13 @@ def send():
     print("{}\n{}\n{}".format(subject,recipient,message_body))
     if "," in recipient:
         recipient_list = recipient.split(",")
-        msg = Message(subject, sender='maacryptoproj@gmail.com', recipients=recipient_list)
+        msg = Message(subject, sender='xxxxxxxx@gmail.com', recipients=recipient_list)
         msg.body = message_body
         mail.send(msg)
     else:
         recipient = recipient.split()
         print(recipient)
-        msg = Message(subject, sender='maacryptoproj@gmail.com', recipients=recipient)
+        msg = Message(subject, sender='xxxxxxxx@gmail.com', recipients=recipient)
         msg.body = encryption.message_encrypt(key, message_body)
         mail.send(msg)
     return "Sent"
