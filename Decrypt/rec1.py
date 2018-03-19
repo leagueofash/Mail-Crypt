@@ -1,3 +1,5 @@
+__author__ = Rajesh
+
 import time
 from itertools import chain
 import email
@@ -7,13 +9,13 @@ import os
 
 imap_ssl_host = 'imap.gmail.com'  # imap.mail.yahoo.com
 imap_ssl_port = 993
-username = 'maacryptoproj@gmail.com'
-password = 'qwert1234'
+username = 'XXXXXX@gmail.com'
+password = 'password_goes_here'
 
 # Restrict mail search. Be very specific.
 # Machine should be very selective to receive messages.
 criteria = {
-    'FROM':    'maacryptoproj@gmail.com',
+    'FROM':    'XXXXXX@gmail.com',
     'SUBJECT': '',
     'BODY':    '',
 }
